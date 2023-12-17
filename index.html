@@ -12,12 +12,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
     <!-- Javascript -->
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-navbar">
+            <a href="#" class="header-navbar-brand light-color">
+                <img src="img/logo.png" alt="Logo">
+                Delta Agency
+            </a>  
+            <button onclick="NavbarToggle()" type="button" class="header-navbar-btn light-color">
+                <i class="bi bi-list"></i>
+            </button>                   
+            <nav class="header-navbar-nav">
+                <ul class="header-navbar-items">
+                    <li class="header-navbar-item">
+                        <a href="#" class="header-navbar-link light-color">Home</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="#" class="header-navbar-link light-color">Services</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="#" class="header-navbar-link light-color">About</a>
+                    </li>
+                    <li class="header-navbar-item">
+                        <a href="#" class="header-navbar-link light-color">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="header-navbar-toggle">
+            <ul class="header-navbar-items">
+                <li class="header-navbar-item">
+                    <a href="#" class="header-navbar-link light-color">Home</a>
+                </li>
+                <li class="header-navbar-item">
+                    <a href="#" class="header-navbar-link light-color">Services</a>
+                </li>
+                <li class="header-navbar-item">
+                    <a href="#" class="header-navbar-link light-color">About</a>
+                </li>
+                <li class="header-navbar-item">
+                    <a href="#" class="header-navbar-link light-color">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-title">
+            <h2 class="primary-color">Delta Agency</h2>
+            <h1 class="light-color">Digital Marketing Specialist</h1>
+            <a href="#" class="btn btn-primary">
+                <i class="bi bi-rocket"></i>
+                Get Started
+            </a>
+        </div>
+    </header>    
 </body>
 </html>

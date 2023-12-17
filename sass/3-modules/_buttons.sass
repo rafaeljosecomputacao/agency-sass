@@ -1,0 +1,22 @@
+@use '../1-base/variables'
+@use 'sass:map'
+
+.btn
+    padding: .5rem 2rem
+    border-radius: 0
+    border: 2px solid variables.$primary-color
+    background-color: variables.$light-color
+    color: variables.$primary-color 
+    font-size: map-get(variables.$font-sizes, "btn")
+    font-weight: map-get(variables.$font-weights, "light")
+    text-transform: uppercase
+    transition: .5s
+    cursor: pointer  
+
+    &-primary
+        background-color: variables.$primary-color
+        color: variables.$light-color 
+
+        &:hover
+            background-color: transparent
+            color: variables.$primary-color
