@@ -1,0 +1,84 @@
+@use '../1-base/variables'
+@use '../1-base/media-queries'
+@use '../3-modules/modules-mixins'
+@use 'sass:map'
+
+/* Footer
+footer
+    background-color: variables.$dark-color
+    color: variables.$light-color
+    padding: map-get(variables.$spacings, "large") map-get(variables.$spacings, "small") 24px
+    margin-top: 24px
+
+    @include media-queries.desktop
+        padding: map-get(variables.$spacings, "large") 100px 24px
+
+    .footer-container
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+
+        @include media-queries.desktop
+            flex-direction: row
+
+    .footer-title
+        font-weight: map-get(variables.$font-weights, "bold")
+        margin-bottom: 1.5rem
+
+    .footer-desc-container, .footer-links-container
+        width: 100%
+        text-align: center
+
+        @include media-queries.desktop
+            text-align: left
+    
+    .footer-desc-container
+        margin-bottom: map-get(variables.$spacings, "large")
+
+        @include media-queries.desktop
+            width: 65%
+
+        p
+            margin-bottom: 0
+
+            @include media-queries.tablet
+                margin: 0 map-get(variables.$spacings, "medium") 0
+            
+            @include media-queries.desktop
+                margin: 0
+                width: 90%
+
+    .footer-links-container
+        display: flex
+        flex-direction: column
+
+        @include media-queries.desktop
+            width: 35%
+            flex-direction: row
+            justify-content: space-between
+
+        &-list
+            margin-bottom: map-get(variables.$spacings, "medium")
+
+            li
+                margin-bottom: map-get(variables.$spacings, "small")
+
+            a
+                color: variables.$light-color
+                transition: .3s
+
+                &:hover
+                    color: variables.$primary-color
+
+    .footer-copy-right-container
+        width: 100%
+        margin-top: map-get(variables.$spacings, "small")
+        text-align: center
+
+        p, span
+            color: variables.$secondary-color
+            font-size: .9rem
+            font-weight: map-get(variables.$font-weights, "light")
+        
+        p
+            margin-bottom: map-get(variables.$spacings, "small")
