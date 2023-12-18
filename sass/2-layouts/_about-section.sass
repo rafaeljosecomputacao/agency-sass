@@ -1,0 +1,57 @@
+@use '../1-base/variables'
+@use '../1-base/media-queries'
+@use '../3-modules/modules-mixins'
+@use 'sass:map'
+  
+/* About Section  
+.about-container
+  text-align: center
+  padding: map.get(variables.$spacings, "large") map.get(variables.$spacings, "small") 24px
+
+  h2
+    @extend %section-title
+
+  .about-card-container
+    @include modules-mixins.div-center
+    flex-direction: column
+    padding: map.get(variables.$spacings, "large") 0 0
+
+    @include media-queries.tablet
+      flex-wrap: wrap
+      flex-direction: row
+      padding: 24px 0 0
+      
+    .about-card
+      background-color: variables.$light-color
+      width: 100%
+      margin-bottom: map.get(variables.$spacings, "small")
+      border-radius: 0
+      border: 2px solid variables.$secondary-color
+      transition: .3s
+      cursor: pointer
+
+      @include media-queries.tablet
+        width: 45%
+        margin: map.get(variables.$spacings, "small")
+
+      @include media-queries.desktop
+        width: 27.7%
+
+      i
+        color: variables.$primary-color
+        font-size: 3rem
+        display: block
+        margin: map.get(variables.$spacings, "large") 0 map.get(variables.$spacings, "medium")
+
+      h3
+        color: variables.$dark-color
+        font-weight: map.get(variables.$font-weights, "bold")
+        margin-bottom: map.get(variables.$spacings, "medium")
+      
+      p
+        color: variables.$secondary-color
+        padding: 0 map.get(variables.$spacings, "medium") map.get(variables.$spacings, "large")
+
+      &:hover
+        border-color: variables.$primary-color
+        box-shadow: 0 1px 10px variables.$secondary-color
