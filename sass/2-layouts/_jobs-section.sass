@@ -1,0 +1,116 @@
+@use '../1-base/variables'
+@use '../1-base/media-queries'
+@use '../3-modules/modules-mixins'
+@use 'sass:map'
+
+/* Jobs Section
+.jobs-container
+    padding: 0 map-get(variables.$spacings, "small")
+
+    @include media-queries.tablet
+        padding: 0 34px
+    
+    @include media-queries.desktop
+        padding: 0 100px
+
+    h2
+        @extend %section-title
+        text-align: center
+
+    .jobs-list
+        display: flex
+        flex-direction: column
+        padding: map-get(variables.$spacings, "large") 0 0
+
+        @include media-queries.desktop
+            flex-direction: row
+
+    .first-job
+        @extend %card-mobile     
+        background-image: url('../../img/card-jobs-1.jpg')  
+        @include modules-mixins.img-center
+        position: relative
+        transition: .3s
+        cursor: pointer 
+
+        @include media-queries.tablet
+            height: 450px
+            margin: 0 0 map-get(variables.$spacings, "medium")
+
+        @include media-queries.desktop
+            width: 40%
+            height: 475px
+            margin: 0 map-get(variables.$spacings, "small") 0 0               
+
+    .other-jobs-container
+        display: flex
+        flex-direction: column
+        width: 100%
+
+        @include media-queries.desktop
+            flex-direction: row         
+            justify-content: end
+            flex-wrap: wrap
+            width: 60%
+
+        .job-card
+            @extend %card-mobile 
+            @include modules-mixins.img-center
+            position: relative
+            transition: .3s
+            cursor: pointer
+
+            @include media-queries.tablet
+                height: 450px
+                margin: 0 0 map-get(variables.$spacings, "medium")
+
+            @include media-queries.desktop
+                width: 48% 
+                height: 229.5px
+
+        .job-margin
+
+            @include media-queries.desktop
+                margin-right: map-get(variables.$spacings, "medium")
+
+        #job-2
+            background-image: url('../../img/card-jobs-2.jpg')
+
+        #job-3
+            background-image: url('../../img/card-jobs-3.jpg')
+
+        #job-4
+            background-image: url('../../img/card-jobs-4.jpg')
+
+        #job-5
+            background-image: url('../../img/card-jobs-5.jpg')
+
+    .job-card-cover
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, .5)
+        @include modules-mixins.div-center
+        flex-direction: column
+
+        @include media-queries.desktop
+            opacity: 0
+
+            &:hover
+                opacity: 1
+
+    .job-card-title
+        text-align: center
+        color: variables.$light-color
+        font-size: map-get(variables.$font-sizes, "title")
+        font-weight: map-get(variables.$font-weights, "bold")
+        margin-bottom: map-get(variables.$spacings, "medium")
+
+    .job-card-description
+        text-align: center
+        color: variables.$light-color
+        font-size: .9rem 
+        padding: 0 map-get(variables.$spacings, "medium") 
+   
